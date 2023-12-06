@@ -4,13 +4,13 @@ def stock_picker(price_array)
     max_profit = 0
     day_profit = 0
 
-    price_array.each_with_index do |buy_date, buy_index|
-        price_array.each_with_index do |sell_date, sell_index|
-            day_profit = sell_date - buy_date
-            if day_profit > max_profit && buy_index < sell_index
+    price_array.each_with_index do |buy_value, buy_date|
+        price_array.each_with_index do |sell_value, sell_date|
+            day_profit = sell_value - buy_value
+            if day_profit > max_profit && buy_date < sell_date
                 max_profit = day_profit
-                best_buy = buy_index
-                best_sell = sell_index
+                best_buy = buy_date
+                best_sell = sell_date
             end
         end
     end
