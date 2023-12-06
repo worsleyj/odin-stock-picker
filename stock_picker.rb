@@ -17,6 +17,7 @@ def stock_picker(price_array)
     puts "The best day to buy is on day " + best_buy.to_s.next + 
     ", while the best day to sell is on day " + best_sell.to_s.next + "."
     puts "The maximum profit is $" + max_profit.to_s + "."
+    return [best_buy, best_sell]
 end
 
 puts stock_picker([10,3,6,9,15,8,6,1,10])
